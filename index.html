@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carrossel de revisões</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 80%;
+        border: solid;
+      }
+
+      h1 {
+        font-size: 5em;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+      }
+
+      .container-01 {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        font-size: 2em;
+      }
+      p {
+        width: 50%;
+      }
+    </style>
+    <main>
+      <h1>Revisoes</h1>
+      <div class="container-01">
+        <img src="https://placehold.co/250x250" alt="" />
+        <h1 id="title"></h1>
+        <h2 id="subtitle"></h2>
+        <p id="paragraph"></p>
+        <div class="navegateButtons">
+          <button><</button>
+          <button>></button>
+        </div>
+        <button>Surprise Me</button>
+      </div>
+    </main>
+    <script></script>
+  </body>
+</html>
