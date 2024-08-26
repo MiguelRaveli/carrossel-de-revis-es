@@ -27,12 +27,12 @@
         justify-content: center;
         align-items: center;
         width: 50%;
-        height: 80%;
+        height: 100%;
         border: solid;
       }
 
       h1 {
-        font-size: 5em;
+        font-size: 2em;
         width: 100%;
         height: 20%;
         text-align: center;
@@ -40,7 +40,8 @@
 
       .container-01 {
         width: 100%;
-        height: 70%;
+        height: 100%;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,12 +62,54 @@
         <h2 id="subtitle"></h2>
         <p id="paragraph"></p>
         <div class="navegateButtons">
-          <button><</button>
-          <button>></button>
+          <button class="btn previous"><</button>
+          <button class="btn next">></button>
         </div>
         <button>Surprise Me</button>
       </div>
     </main>
-    <script></script>
+    <script>
+      const people = [
+        {
+          title: "Miguel",
+          subtitle: "Dev Frontend",
+          para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officiis labore facere velit quas! Eos tempore, iure ullam delectus atque eveniet quae inventore illum ad nobis consequatur voluptatem rerum laborum.",
+        },
+        {
+          title: "Matheus",
+          subtitle: "Dev backend",
+          para: "Labore facere velit quas! Eos tempore, iure ullam delectus atque eveniet quae inventore illum ad nobis consequatur voluptatem rerum laborum.",
+        },
+        {
+          title: "Adriano",
+          subtitle: "Dev full stack",
+          para: "Illum ad nobis consequatur voluptatem rerum laborum.",
+        },
+      ];
+      const btns = document.querySelectorAll(".btn");
+      const paragraph = document.querySelector("#paragraph");
+      const title = document.querySelector("#title");
+      const subtitle = document.querySelector("#subtitle");
+
+      const info = (page) => {
+        title.textContent = people[page].title;
+        subtitle.textContent = people[page].subtitle;
+        paragraph.textContent = people[page].para;
+      };
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const styles = e.currentTarget.classList;
+          if (styles.contains("next")) {
+            let page = 0;
+            page++;
+            info(page);
+          } else if (styles.contains("previous")) {
+            let page = 0;
+            page--;
+            info(page);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
