@@ -96,18 +96,19 @@
         subtitle.textContent = people[page].subtitle;
         paragraph.textContent = people[page].para;
       };
+      let page = 0;
       btns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const styles = e.currentTarget.classList;
           if (styles.contains("next")) {
-            let page = 0;
+            if(page === people.length){
+              
+            }
             page++;
-            info(page);
           } else if (styles.contains("previous")) {
-            let page = 0;
             page--;
-            info(page);
           }
+          info(page);
         });
       });
     </script>
