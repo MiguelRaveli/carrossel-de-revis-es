@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  background-color: #dee3e9;
+}
+
+#titleApp {
+  font-size: 2em;
+  width: auto;
+  height: auto;
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 7px solid #6969e7;
+}
+
+.container-01 {
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+button {
+  font-size: 2em;
+}
+p {
+  width: 80%;
+  font-size: 1.1em;
+  text-align: center;
+}
